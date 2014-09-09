@@ -1,0 +1,1 @@
+/Applications/XAMPP/xamppfiles/htdocs/mywebs/laraveltest/mHealth/app/views/districts/create.blade.php
