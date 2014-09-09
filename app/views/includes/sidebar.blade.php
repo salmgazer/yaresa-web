@@ -93,9 +93,8 @@
                         <li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> Health Promotion</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                        </li>
+                        
+                        
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> Support Data<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -132,10 +131,8 @@
                                 <li>
                                     <a href="#">Users</a>
                                 </li>
-                                <li>
-                                    <a href="#">CHOs</a>
-                                </li>
                                 
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
