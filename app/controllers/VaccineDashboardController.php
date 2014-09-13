@@ -118,6 +118,21 @@ class VaccineDashboardController extends \BaseController {
 	}
 
 
+/**
+
+This deals with all vaccine related reports, not just the dashboard
+
+*/
+/**
+*	@return Response
+*
+*/
+	pubilc function diseaseEvent(){
+		//$sql ="SELECT COUNT( `community_members_opd_cases`.`community_member_id` ), `opd_cases`.`opd_case_name`, `opd_case_categories`.`opd_case_category_id`, `opd_case_categories`.`opd_case_category`, `community_members_opd_cases`.`rec_date`, `community_members_opd_cases`.`lab` FROM `mhealth-ashesi`.`opd_case_categories` AS `opd_case_categories`, `mhealth-ashesi`.`opd_cases` AS `opd_cases`, `mhealth-ashesi`.`community_members` AS `community_members`, `mhealth-ashesi`.`community_members_opd_cases` AS `community_members_opd_cases` WHERE `opd_case_categories`.`opd_case_category_id` = `opd_cases`.`opd_case_category` AND `community_members`.`community_member_id` = `community_members_opd_cases`.`community_member_id` AND `opd_cases`.`opd_case_id` = `community_members_opd_cases`.`opd_case_id` GROUP BY `opd_cases`.`opd_case_name`";
+		$sql="SELECT COUNT( community_members_opd_cases.community_member_id ) as theCount, opd_cases.opd_case_name, opd_case_categories.opd_case_category_id, opd_case_categories.opd_case_category, community_members_opd_cases.rec_date, community_members_opd_cases.lab FROM opd_case_categories AS opd_case_categories, opd_cases AS opd_cases, community_members AS community_members, community_members_opd_cases AS community_members_opd_cases WHERE opd_case_categories.opd_case_category_id = opd_cases.opd_case_category AND community_members.community_member_id = community_members_opd_cases.community_member_id AND opd_cases.opd_case_id = community_members_opd_cases.opd_case_id GROUP BY opd_cases.opd_case_name";
+		$diesaseEvent=DB::select($sql);
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.

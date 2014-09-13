@@ -19,7 +19,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> OPD<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Report 1</a>
+                                    <a href="{{ URL::to('OPDEvents') }}">OPD Events</a>
                                 </li>
                                 <li>
                                     <a href="#">Report 2</a>
@@ -56,7 +56,7 @@
                                     <a href="#">By Age </a>
                                 </li>
                                 <li>
-                                    <a href="#">By Gender</a>
+                                    <a href="{{ URL::to('CommunityMembers/gender') }} ">By Gender</a>
                                 </li>
                                 <li>
                                     <a href="#">NHIA expiry</a>

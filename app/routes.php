@@ -86,7 +86,10 @@ Route::group (array('before' => 'auth'), function(){
 	Route::get('Chos/search','ChosController@search');  /* should occur b4 resource route */
 	Route::resource('Chos', 'ChosController');
 	Route::get('CommunityMembers/search','CommunityMembersController@search');  /* should occur b4 resource route */
+	Route::get('CommunityMembers/gender','CommunityMembersController@communitiesByGender');  /* should occur b4 resource route */
 	Route::resource('CommunityMembers', 'CommunityMembersController');
+	
+	Route::get('OPDEvents','OpdCasesController@OPDevents');
 	Route::resource('OpdCases', 'OpdCasesController');
 	Route::resource('OpdCaseCategories', 'OpdCaseCategoriesController');
 	Route::resource('Vaccines', 'VaccinesController');

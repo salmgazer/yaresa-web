@@ -130,4 +130,17 @@ class CommunityMembersController extends \BaseController {
 	public function search()
 	{
 	}
+
+
+	/**
+	additional reports for communities
+
+	*/
+	public function communitiesByGender()
+	{
+		//$sql="SELECT COUNT( `community_members`.`community_member_id` ), `communities`.`community_name`, `community_members`.`gender` FROM `mhealth-ashesi`.`communities` AS `communities`, `mhealth-ashesi`.`community_members` AS `community_members` WHERE `communities`.`community_id` = `community_members`.`community_id` GROUP BY `communities`.`community_name`, `community_members`.`gender`";
+		$sql="SELECT COUNT( community_members.community_member_id ) AS theCount, sum(if (gender='m',1,0)) as Males, sum(if(gender='f',1,0)) as Females,  communities.community_name FROM communities AS communities, community_members AS community_members WHERE communities.community_id = community_members.community_id GROUP BY communities.community_name  order by community_name ";
+		$communitiesByGenders=DB::select($sql);
+		return View::make('CommunityMembers.communitiesByGender', compact('communitiesByGenders'));
+	}
 }
