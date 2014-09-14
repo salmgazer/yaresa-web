@@ -111,6 +111,29 @@
                                     <a href="{{ URL::to('community')}}">Communities</a>
                                     
                                 </li>
+
+<li>
+                                    <a href="#">Communities Data <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="{{ URL::to('community')}}">Communities</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ URL::to('community/populationMap')}}">Population Map</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+
+
+
+
                                 <li>
                                     <a href="{{ URL::to('subdistricts')}}">Sub-districts</a>
                                 </li>

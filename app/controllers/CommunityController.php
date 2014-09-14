@@ -186,4 +186,12 @@ class CommunityController extends \BaseController {
 			->with('sort',$sort);
 	}
 
+	public function populationMap(){
+		$communities=Community::with('subdistrict')->get();			//test with limit ->take(5)
+		return View::make('communities.populationMap', compact('communities'));
+		
+
+
+	}
+
 }

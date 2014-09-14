@@ -80,6 +80,7 @@ Route::group (array('before' => 'auth'), function(){
 
 	Route::resource('vaccinedashboard', 'VaccineDashboardController');
 	Route::get('community/search','CommunityController@search');  /* should occur b4 resource route */
+	Route::get('community/populationMap','CommunityController@populationMap');  
 	Route::resource('community', 'CommunityController');
 	Route::resource('subdistricts', 'SubdistrictsController');
 	
